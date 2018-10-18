@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Nav from "./components/Nav";
 import CharacterCard from "./components/characterCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
@@ -8,7 +9,9 @@ import "./App.css";
 class App extends Component {
   // Setting this.state.characters to the characters json array
   state = {
-    characters
+    characters,
+    score: 0,
+    topScore: 0
   };
 
   removeCharacter = id => {
@@ -22,6 +25,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+      <Nav brand="Clicky Game" score={this.state.score} topScore={this.state.topScore} />
         <Title>characters List</Title>
         {this.state.characters.map(character => (
           <CharacterCard
