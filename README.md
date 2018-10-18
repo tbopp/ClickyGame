@@ -1,4 +1,4 @@
-# Clicky Game #
+# Clicky Game
 
 ## Memory card game built with React.js ##
 
