@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Homer",
+      "image": "https://en.wikipedia.org/wiki/File:Homer_Simpson_2006.png#/media/File:Homer_Simpson_2006.png"
+    },
+    {
+      "id": 2,
+      "name": "Marge",
+      "image": "https://en.wikipedia.org/wiki/File:Marge_Simpson.png#/media/File:Marge_Simpson.png"
+    },
+    {
+      "id": 3,
+      "name": "Bart",
+      "image": "https://en.wikipedia.org/wiki/File:Bart_Simpson_200px.png#/media/File:Bart_Simpson_200px.png"
+    },
+    {
+      "id": 4,
+      "name": "Lisa",
+      "image": "https://en.wikipedia.org/wiki/File:Lisa_Simpson.png#/media/File:Lisa_Simpson.png"
+    },
+    {
+      "id": 5,
+      "name": "Maggie",
+      "image": "https://en.wikipedia.org/wiki/File:Maggie_Simpson.png#/media/File:Maggie_Simpson.png"
+    },
+    {
+      "id": 6,
+      "name": "Commic Book Guy",
+      "image": "https://en.wikipedia.org/wiki/File:The_Simpsons-Jeff_Albertson.png#/media/File:The_Simpsons-Jeff_Albertson.png"
+    },
+    {
+      "id": 7,
+      "name": "Mr. Burns",
+      "image": "https://en.wikipedia.org/wiki/File:Mr_Burns.png#/media/File:Mr_Burns.png"
+    },
+    {
+      "id": 8,
+      "name": "Ned Flanders",
+      "image": "https://en.wikipedia.org/wiki/File:Ned_Flanders.png#/media/File:Ned_Flanders.png"
+    },
+    {
+      "id": 9,
+      "name": "Dr. Hibbert",
+      "image": "https://en.wikipedia.org/wiki/File:Doctor_Hibbert.png#/media/File:Doctor_Hibbert.png"
+    },
+    {
+      "id": 10,
+      "name": "Krusty the Clown",
+      "image": "https://en.wikipedia.org/wiki/File:Krustytheclown.png#/media/File:Krustytheclown.png"
+    },
+    {
+      "id": 11,
+      "name": "Seymour Skinner",
+      "image": "https://en.wikipedia.org/wiki/File:Seymour_Skinner.png#/media/File:Seymour_Skinner.png"
+    },
+    {
+      "id": 12,
+      "name": "Edna Krabappel",
+      "image": "https://en.wikipedia.org/wiki/File:Edna_Krabappel.png#/media/File:Edna_Krabappel.png"
+    }
+  ]
+  
