@@ -20,10 +20,10 @@
 
 .card:hover {
   transform: scale(1.06); /* (106% zoom */
-  -webkit-box-shadow: 0 5px 8px rgba(0,0,0,.16), 0 5px 8px rgba(0,0,0,.23);
-    box-shadow: 0 5px 8px rgba(0,0,0,.16), 0 5px 8px rgba(0,0,0,.23);
+  -webkit-box-shadow: 0 5px 8px rgba(0,0,0,.16), 0 5px 8px rgba(0,0,0,.20);
+    box-shadow: 0 9px 15px rgba(0,0,0,.16), 0 9px 15px rgba(0,0,0,.20);
 }
 
 .card > .img-container > img:hover {
-  transform: scale(1.06); /* (106% zoom */
+  transform: scale(1.02); /* (106% zoom */
 }

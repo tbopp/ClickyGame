@@ -1,0 +1,17 @@
+.footer {
+    background: #D1B271;
+    height: 100px;
+    position: relative;
+    color: #fff;
+    overflow: auto;
+}
+
+.footer>.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FED90F;
+    padding: 8px;
+    font-weight: 600;
+}
