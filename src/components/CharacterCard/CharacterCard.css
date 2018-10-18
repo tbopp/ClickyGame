@@ -15,10 +15,15 @@
 .card > .img-container > img {
   max-height: 170px;
     max-width: 170px;
+    transition: transform .8s; /* Animation */
 }
 
 .card:hover {
   transform: scale(1.06); /* (106% zoom */
   -webkit-box-shadow: 0 5px 8px rgba(0,0,0,.16), 0 5px 8px rgba(0,0,0,.23);
     box-shadow: 0 5px 8px rgba(0,0,0,.16), 0 5px 8px rgba(0,0,0,.23);
+}
+
+.card > .img-container > img:hover {
+  transform: scale(1.06); /* (106% zoom */
 }

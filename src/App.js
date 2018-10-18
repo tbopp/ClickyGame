@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Nav from "./components/Nav";
 import CharacterCard from "./components/CharacterCard";
-import Wrapper from "./components/Wrapper";
-// import Title from "./components/Title";
+import Container from "./components/Container";
+import Header from "./components/Header";
 import characters from "./characters.json";
 import "./App.css";
 
@@ -24,19 +24,21 @@ class App extends Component {
   // Map over this.state.characters and render a CharacterCard component for each character object
   render() {
     return (
-      <Wrapper>
-      <Nav brand="Clicky Game" score={this.state.score} topScore={this.state.topScore} />
-        {/* <Title>characters List</Title> */}
-        {this.state.characters.map(character => (
-          <CharacterCard
-            removeCharacter={this.removeCharacter}
-            id={character.id}
-            key={character.id}
-            name={character.name}
-            image={character.image}
-          />
-        ))}
-      </Wrapper>
+      <div>
+        <Nav brand="Clicky Game" score={this.state.score} topScore={this.state.topScore} />
+        <Header h1="Clicky Game!" h2="Click on an image to earn points, but don't click on any more than once!" />
+        <Container>
+          {this.state.characters.map(character => (
+            <CharacterCard
+              removeCharacter={this.removeCharacter}
+              id={character.id}
+              key={character.id}
+              name={character.name}
+              image={character.image}
+            />
+            ))}
+        </Container>
+      </div>
     );
   }
 }
