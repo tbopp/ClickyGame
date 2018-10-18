@@ -5,7 +5,6 @@ import Container from "./components/Container";
 import Header from "./components/Header";
 import characters from "./characters.json";
 import Footer from "./components/Footer";
-// import Bottom from "./components/Bottom";
 import "./App.css";
 
 class App extends Component {
