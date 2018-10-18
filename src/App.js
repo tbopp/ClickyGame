@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Nav from "./components/Nav";
-import CharacterCard from "./components/characterCard";
+import CharacterCard from "./components/CharacterCard";
 import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+// import Title from "./components/Title";
 import characters from "./characters.json";
 import "./App.css";
 
@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <Wrapper>
       <Nav brand="Clicky Game" score={this.state.score} topScore={this.state.topScore} />
-        <Title>characters List</Title>
+        {/* <Title>characters List</Title> */}
         {this.state.characters.map(character => (
           <CharacterCard
             removeCharacter={this.removeCharacter}
