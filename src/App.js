@@ -18,14 +18,14 @@ class App extends Component {
     this.setState({ characters });
   };
 
-  // Map over this.state.characters and render a CharacterCard component for each friend object
+  // Map over this.state.characters and render a CharacterCard component for each character object
   render() {
     return (
       <Wrapper>
         <Title>characters List</Title>
         {this.state.characters.map(character => (
           <CharacterCard
-            removeFriend={this.removeFriend}
+            removeCharacter={this.removeCharacter}
             id={character.id}
             key={character.id}
             name={character.name}
