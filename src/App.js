@@ -7,26 +7,87 @@ import characters from "./characters.json";
 import Footer from "./components/Footer";
 import "./App.css";
 
+
+// Shuffle (randomization) function of characters.
+function shuffleCards(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
+
 class App extends Component {
-  // Setting this.state.characters to the characters json array
   state = {
     characters,
     score: 0,
-    topScore: 0
+    topScore: 0,
+    clicked: [],
+    winLose: ""
   };
 
-  removeCharacter = id => {
-    // Filter this.state.characters for characters with an id not equal to the id being removed
-    const characters = this.state.characters.filter(character => character.id !== id);
-    // Set this.state.characters equal to the new characters array
-    this.setState({ characters });
+  // Initializes shuffle of cards upon loading of the componenet (the page)
+  componentDidMount() {
+    shuffleCards(characters);
+  }
+
+  // Event handler for clicking on card
+  handleClick = id => {
+    if (this.state.clicked.indexOf(id) === -1) {
+      this.handleScore();
+      this.setState({
+        clicked: this.state.clicked.concat(id)
+      });
+    } else {
+      this.handleReset();
+    }
+  };
+
+  // Function for keeping score until a max of 12 available cards are clicked.
+  handleScore = () => {
+    const newScore = this.state.score + 1;
+    this.setState({
+      score: newScore,
+      winLose: ""
+    });
+    if (newScore >= this.state.topScore) {
+      this.setState({
+        topScore: newScore
+      });
+    } else if (newScore === 12) {
+      this.setState({
+        winLose: "WooHoo!!"
+      });
+    }
+    this.handleShuffle();
+  };
+
+  // Function to reset the game if a lose occures, resets score to zero.
+  handleReset = () => {
+    this.setState({
+      score: 0,
+      topScore: this.state.topScore,
+      winLose: "D'OH!!",
+      clicked: []
+    });
+    this.handleShuffle();
+  };
+
+  //shuffles the cards on page
+  handleShuffle = () => {
+    let shuffledCards = shuffleCards(characters);
+    this.setState({
+      characters: shuffledCards
+    });
   };
 
   // Map over this.state.characters and render a CharacterCard component for each character object
   render() {
     return (
       <div>
-        <Nav brand="Clicky Game" score={this.state.score} topScore={this.state.topScore} />
+        <Nav 
+        brand="Clicky Game" winLose={this.winLose} score={this.state.score} topScore={this.state.topScore} />
         <Header h1="Clicky Game!" h2="Click on an image to earn points, but don't click on any more than once!" />
         <Container>
           {this.state.characters.map(character => (
@@ -34,8 +95,11 @@ class App extends Component {
               removeCharacter={this.removeCharacter}
               id={character.id}
               key={character.id}
-              name={character.name}
               image={character.image}
+              handleClick={this.handleClick}
+              handleScore={this.handleScore}
+              handleReset={this.handleReset}
+              handleShuffle={this.handleShuffle}
             />
             ))}
         </Container>
