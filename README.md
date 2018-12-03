@@ -1,4 +1,4 @@
-# Clicky Game
+# Clicky (Memory) Game
 
 ![alt text](https://github.com/tbopp/clickygame/blob/master/public/assets/images/PreviewClicky.gif?raw=true "Clicky Game")  
 
